@@ -92,7 +92,12 @@
 			gpios = <&pio 0 20 GPIO_ACTIVE_HIGH>;
 		};
 	};
-
+	my_power_key {
+		compatible = "test_key";
+		interrupt-parent = <&r_pio>;
+		interrupts = <0 3 IRQ_TYPE_EDGE_BOTH>;
+	};
+/*	
 	r-gpio-keys {
 		compatible = "gpio-keys";
 
@@ -102,7 +107,7 @@
 			gpios = <&r_pio 0 3 GPIO_ACTIVE_LOW>;
 		};
 	};
-
+*/
 	reg_gmac_3v3: gmac-3v3 {
 		compatible = "regulator-fixed";
 		regulator-name = "gmac-3v3";
