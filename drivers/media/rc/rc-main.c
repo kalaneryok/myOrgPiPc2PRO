@@ -581,7 +581,7 @@ u32 rc_g_keycode_from_table(struct rc_dev *dev, u32 scancode)
 	if (keycode != KEY_RESERVED)
 		dev_dbg(&dev->dev, "%s: scancode 0x%04x keycode 0x%02x\n",
 			dev->device_name, scancode, keycode);
-
+    printk("code:0X%X\n,keycode:0X%X\n",scancode,keycode);
 	return keycode;
 }
 EXPORT_SYMBOL_GPL(rc_g_keycode_from_table);

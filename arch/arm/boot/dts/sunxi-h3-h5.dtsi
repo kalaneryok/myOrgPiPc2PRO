@@ -817,7 +817,7 @@
 			resets = <&r_ccu RST_APB0_IR>;
 			interrupts = <GIC_SPI 37 IRQ_TYPE_LEVEL_HIGH>;
 			reg = <0x01f02000 0x40>;
-			status = "disabled";
+			status = "okay";
 		};
 
 		r_i2c: i2c@1f02400 {
