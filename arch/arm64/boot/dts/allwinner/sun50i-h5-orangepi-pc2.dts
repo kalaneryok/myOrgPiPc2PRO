@@ -187,6 +187,7 @@
 	pinctrl-names = "default";
 	pinctrl-0 = <&ir_pins_a>;
 	status = "okay";
+	linux,rc-map-name = "rc-nec-alientek";
 };
 
 &mmc0 {

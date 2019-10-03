@@ -149,10 +149,8 @@ static int ir_nec_decode(struct rc_dev *dev, struct ir_raw_event ev)
 							    command,
 							    not_command,
 							    &rc_proto);
-
 			if (data->is_nec_x)
 				data->necx_repeat = true;
-
 			rc_keydown(dev, rc_proto, scancode, 0);
 		} else {
 			rc_repeat(dev);

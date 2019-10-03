@@ -104,7 +104,6 @@ static irqreturn_t sunxi_ir_irq(int irqno, void *dev_id)
 	spin_lock(&ir->ir_lock);
 
 	status = readl(ir->base + SUNXI_IR_RXSTA_REG);
-        printk("----0x%X-\n",status);
 	/* clean all pending statuses */
 	writel(status | REG_RXSTA_CLEARALL, ir->base + SUNXI_IR_RXSTA_REG);
 	if (status & (REG_RXINT_RAI_EN | REG_RXINT_RPEI_EN)) {
@@ -120,7 +119,6 @@ static irqreturn_t sunxi_ir_irq(int irqno, void *dev_id)
 			rawir.duration = ((dt & 0x7f) + 1) *
 					 ir->rc->rx_resolution;
 			ir_raw_event_store_with_filter(ir->rc, &rawir);
-        		printk("%x \n",dt);
 		}
 	}
 
