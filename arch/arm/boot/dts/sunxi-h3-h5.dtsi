@@ -639,7 +639,7 @@
 			dmas = <&dma 15>, <&dma 15>;
 			dma-names = "rx", "tx";
 			allwinner,codec-analog-controls = <&codec_analog>;
-			status = "disabled";
+			status = "okay";
 		};
 
 		uart0: serial@1c28000 {
